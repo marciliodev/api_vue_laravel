@@ -1,33 +1,52 @@
 <template>
-  <div class="">
 
-      <h2>Social</h2>
+  <span>
 
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div> 
-            <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
+    <div class="row">
+        <grid-vue class="input-field" tamanho="12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">O que está acontecendo?</label>
+        </grid-vue>
+        <p>
+          <grid-vue class="btn waves-effect waves-light" tamanho="2 offset-s10">Publicar</grid-vue>
+        </p>
     </div>
+   
+    <card-conteudo-vue 
+        perfil="https://materializecss.com/images/yuna.jpg"
+        nome="Maria Silva" 
+        data="13/01/2018 13:30">
 
-  </div>
+
+      <card-detalhe-vue 
+        img="https://materializecss.com/images/sample-1.jpg" 
+        titulo="" 
+        texto="I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively."/>   
+      </card-conteudo-vue>
+
+  </span>
+ 
+
+
 </template>
 
 <script>
+import CardConteudoVue from '@/components/social/CardConteudoVue'
+import CardDetalheVue from '@/components/social/CardDetalheVue'
+import GridVue from '@/components/layouts/GridVue'
+
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   data () {
     return {
     }
+  },
+  components: {
+    CardConteudoVue,
+    CardDetalheVue,
+    GridVue
+    
   }
 }
 </script>
@@ -36,3 +55,4 @@ export default {
 <style scoped>
     
 </style>
+ 
