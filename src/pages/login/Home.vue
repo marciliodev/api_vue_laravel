@@ -2,7 +2,10 @@
 
   <span>
 
-    <publicar-conteudo-vue />
+    <publicar-conteudo-vue>
+      
+    </publicar-conteudo-vue>
+
    
     <card-conteudo-vue 
         perfil="https://materializecss.com/images/yuna.jpg"
