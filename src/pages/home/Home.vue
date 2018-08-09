@@ -1,6 +1,6 @@
 <template>
 
-  <span>
+  <site-template>
 
     <publicar-conteudo-vue />
    
@@ -17,13 +17,14 @@
           I am convenient because I require little markup to use effectively."/>   
       </card-conteudo-vue>
 
-  </span>
+  </site-template>
  
 
 
 </template>
 
 <script>
+import SiteTemplate from '@/templates/SiteTemplate'
 import CardConteudoVue from '@/components/social/CardConteudoVue'
 import CardDetalheVue from '@/components/social/CardDetalheVue'
 import PublicarConteudoVue from '@/components/social/PublicarConteudoVue'
@@ -35,6 +36,7 @@ export default {
     }
   },
   components: {
+    SiteTemplate,
     CardConteudoVue,
     CardDetalheVue,
     PublicarConteudoVue

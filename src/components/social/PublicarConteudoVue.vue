@@ -5,7 +5,10 @@
           <label>O que está acontecendo?</label>
         </grid-vue>
         <p>
-          <grid-vue v-if="conteudo" class="btn waves-effect waves-light" tamanho="2 offset-s10">Publicar</grid-vue>
+          <!-- <grid-vue v-if="conteudo" class="btn waves-effect waves-light" tamanho="2 offset-s10">Publicar</grid-vue>
+          Verificar depois porque a verificação de conteúdo não está funcionando no VUE
+           -->
+          <grid-vue class="btn waves-effect waves-light" tamanho="2 offset-s10">Publicar</grid-vue>
         </p>
     </div>
 </template>
