@@ -8,11 +8,26 @@
     
     <span slot="principal">
 
+        <span v-if="!cadastro">
         <h2>Login</h2>
 
         <input input="text" placeholder="E-mail" value="">
         <input type="text" placeholder="Senha" value="">
-        <button type="button" class="btn">Entrar</button>
+        <button class="btn">Entrar</button>
+        <button class="btn orange" v-on:click="cadastro = !cadastro">Cadastra-se</button>
+
+        </span>
+         <span v-if="cadastro">
+        <h2>Cadastro</h2>
+
+        <input type="text" placeholder="Nome" value="">
+        <input input="text" placeholder="E-mail" value="">
+        <input type="password" placeholder="Senha" value="">
+        <input type="password" placeholder="Confirme sua Senha" value="">
+        <button class="btn">Enviar</button>
+        <button class="btn orange" v-on:click="cadastro = !cadastro">Já tenho conta</button>
+
+        </span>
 
     </span>
   
@@ -25,21 +40,16 @@
 
 <script>
 import LoginTemplate from '@/templates/LoginTemplate'
-import CardConteudoVue from '@/components/social/CardConteudoVue'
-import CardDetalheVue from '@/components/social/CardDetalheVue'
-import PublicarConteudoVue from '@/components/social/PublicarConteudoVue'
 
 export default {
   name: 'Login',
   data () {
     return {
+      cadastro: false
     }
   },
   components: {
-    LoginTemplate,
-    CardConteudoVue,
-    CardDetalheVue,
-    PublicarConteudoVue
+    LoginTemplate
   }
 }
 </script>
